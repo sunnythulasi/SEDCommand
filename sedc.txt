@@ -73,3 +73,65 @@ linux is great os. unix is opensource. unix is free os.
 learn operating system.
 linuxlinux which one you choose.
 linuxlinux which one you choose.
+***************8some more***********
+root@ubuntu:~/SEDCommand# sed -n 's/unix/linux/p' file.txt
+linux is great os. unix is opensource. unix is free os.
+linuxlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/unix/linux/' file.txt| sed 's/os/system/'
+linux is great system. unix is opensource. unix is free os.
+learn operating system.
+linuxlinux which one you chosysteme.
+root@ubuntu:~/SEDCommand# sed 's/unix/linux/' file.txt| sed 's/os/operratingsystem/'
+linux is great operratingsystem. unix is opensource. unix is free os.
+learn operating system.
+linuxlinux which one you chooperratingsysteme.
+root@ubuntu:~/SEDCommand# sed -e 's/unix/linux/' -e 's/os/operatingsystem/g' file.txt
+linux is great operatingsystem. unix is opensource. unix is free operatingsystem.
+learn operating system.
+linuxlinux which one you chooperatingsysteme.
+root@ubuntu:~/SEDCommand# sed '3 s/unix/linux/' file.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+linuxlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed '1,3 s/unix/redhat/' file.txt
+redhat is great os. unix is opensource. unix is free os.
+learn operating system.
+redhatlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed '1,3 s/unix/redhat/g' file.txt
+redhat is great os. redhat is opensource. redhat is free os.
+learn operating system.
+redhatlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed '2,$ s/unix/linux/' file.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+linuxlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed '/linux/ s/unix/centos/' file.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+centoslinux which one you choose.
+root@ubuntu:~/SEDCommand# grep 'unix' file.txt
+unix is great os. unix is opensource. unix is free os.
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed -n '/unix/ p' file.txt
+unix is great os. unix is opensource. unix is free os.
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# grep -v 'unix' file.txt
+learn operating system.
+root@ubuntu:~/SEDCommand# sed -n '/unix/ !p' file.txt
+learn operating system.
+root@ubuntu:~/SEDCommand# sed '/unix/ a "Add a new line"' file.txt
+unix is great os. unix is opensource. unix is free os.
+"Add a new line"
+learn operating system.
+unixlinux which one you choose.
+"Add a new line"
+root@ubuntu:~/SEDCommand# sed '/unix/ i "Add a new line"' file.txt
+"Add a new line"
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+"Add a new line"
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed '/unix/ c "Change line"' file.txt
+"Change line"
+learn operating system.
+"Change line"
