@@ -66,3 +66,10 @@ inux is great os. unix is opensource. unix is free os.
 aelrn operating system.
 inuxlinux which one you choose.
 **********options*************
+********print lines***********
+root@ubuntu:~/SEDCommand# sed 's/unix/linux/p' file.txt
+linux is great os. unix is opensource. unix is free os.
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linuxlinux which one you choose.
+linuxlinux which one you choose.
