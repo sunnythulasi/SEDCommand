@@ -4,3 +4,65 @@ linux is great os. unix is opensource. unix is free os.
 learn operating system.
 linuxlinux which one you choose.
 *****first-option***********
+******options************
+root@ubuntu:~/SEDCommand# cat file.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/unix/linux/2' file.txt
+unix is great os. linux is opensource. unix is free os.
+learn operating system.
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/unix/linux/3' file.txt
+unix is great os. unix is opensource. linux is free os.
+learn operating system.
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/unix/linux/g' file.txt
+linux is great os. linux is opensource. linux is free os.
+learn operating system.
+linuxlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/unix/linux/2g' file.txt
+unix is great os. linux is opensource. linux is free os.
+learn operating system.
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/unix/{&}/' file.txt
+{unix} is great os. unix is opensource. unix is free os.
+learn operating system.
+{unix}linux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/unix/{&&}/' file.txt
+{unixunix} is great os. unix is opensource. unix is free os.
+learn operating system.
+{unixunix}linux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/unix/{&&}/g' file.txt
+{unixunix} is great os. {unixunix} is opensource. {unixunix} is free os.
+learn operating system.
+{unixunix}linux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/\(unix\)/\1\1/' file.txt
+unixunix is great os. unix is opensource. unix is free os.
+learn operating system.
+unixunixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/\(unix\)/\1\1\1/' file.txt
+unixunixunix is great os. unix is opensource. unix is free os.
+learn operating system.
+unixunixunixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/\(unix\)/\1\1\1/g' file.txt
+unixunixunix is great os. unixunixunix is opensource. unixunixunix is free os.
+learn operating system.
+unixunixunixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/\(unix\)/\1\1\1/2' file.txt
+unix is great os. unixunixunix is opensource. unix is free os.
+learn operating system.
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/\(unix\)\(linux\)/\2\1/' file.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+linuxunix which one you choose.
+root@ubuntu:~/SEDCommand# cat file.txt
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unixlinux which one you choose.
+root@ubuntu:~/SEDCommand# sed 's/^\(.\)\(.\)\(.\)/\3\2\1/' file.txt
+inux is great os. unix is opensource. unix is free os.
+aelrn operating system.
+inuxlinux which one you choose.
+**********options*************
