@@ -135,3 +135,6 @@ root@ubuntu:~/SEDCommand# sed '/unix/ c "Change line"' file.txt
 "Change line"
 learn operating system.
 "Change line"
+root@ubuntu:~/SEDCommand# sed -n '/unix/ p' file.txt
+unix is great os. unix is opensource. unix is free os.
+unixlinux which one you choose.
