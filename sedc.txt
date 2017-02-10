@@ -1,1 +1,6 @@
 Examples of sed command
+root@ubuntu:~/SEDCommand# sed 's/unix/linux/' file.txt
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linuxlinux which one you choose.
+*****first-option***********
